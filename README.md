@@ -13,7 +13,7 @@ Like `Array.prototype.every` but for every n
 ## Usage
 
 ```js
-var everyN = require('everyN');
+var everyN = require('every-n');
 
 everyN(2, [1, 5, 10], fixtures.isAscending); // => true
 everyN(2, [8, 5, 10], fixtures.isAscending); // => false

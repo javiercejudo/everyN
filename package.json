@@ -1,6 +1,6 @@
 {
-  "name": "everyN",
-  "version": "0.0.0",
+  "name": "every-n",
+  "version": "1.0.0",
   "description": "Like Array.prototype.every but for every n",
   "main": "src/everyN.js",
   "scripts": {
