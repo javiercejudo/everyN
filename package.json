@@ -1,7 +1,7 @@
 {
   "name": "every-n",
   "version": "1.0.1",
-  "description": "Like Array.prototype.every but for every n",
+  "description": "Like Array.prototype.every but for every n-tuple",
   "main": "src/everyN.js",
   "scripts": {
     "test": "gulp test"
