@@ -22,17 +22,20 @@ module.exports = function everyN(n, array, callback, thisArg) {
     return array.every(callback, thisArg);
   }
 
-  var lengthMinusN = array.length - n;
-  var index;
+  var length = array.length;
+  var items = array.slice(0, n - 1);
   var iterationArgs;
+  var index;
 
-  for (index = 0; index <= lengthMinusN; index += 1) {
-    iterationArgs = array.slice(index, index + n);
-    iterationArgs.push(index + 1, array);
+  for (index = n - 1; index < length; index += 1) {
+    items.push(array[index]);
+    iterationArgs = items.concat([index, array])
 
     if (!callback.apply(thisArg, iterationArgs)) {
       return false;
     }
+
+    items.shift();
   }
 
   return true;
