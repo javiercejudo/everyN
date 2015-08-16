@@ -19,3 +19,7 @@ everyTuple(2, [1, 5, 10], fixtures.isAscendingPair); // => true
 everyTuple(2, [8, 5, 10], fixtures.isAscendingPair); // => false
 everyTuple(3, [0, 1, 1, 2, 3, 5, 8, 13], fixtures.isFibonacciTriple); // => true
 ```
+
+Please note the tuples are passed to the callback as individual arguments, not as an array.
+
+See more examples of [fixture callbacks](fixtures/callbacks.js).
