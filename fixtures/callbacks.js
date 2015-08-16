@@ -3,28 +3,28 @@
 'use strict';
 
 module.exports = {
-  isAscending: isAscending,
-  isFibonacciIncrement: isFibonacciIncrement,
-  isFibonacciIncrementWith2: isFibonacciIncrementWith2,
+  isAscendingPair: isAscendingPair,
+  isFibonacciTriple: isFibonacciTriple,
+  isFibonacciTripleWith2: isFibonacciTripleWith2,
   isSqrt: isSqrt,
   noop: noop
 };
 
 
-function isAscending(a, b) {
+function isAscendingPair(a, b) {
   return b > a;
 }
 
-function isFibonacciIncrement(a, b, c) {
+function isFibonacciTriple(a, b, c) {
   return a + b === c;
 }
 
-function isFibonacciIncrementWith2(a, b, index, array) {
+function isFibonacciTripleWith2(a, b, index, array) {
   if (index < 2) {
     return b >= a;
   }
 
-  return isFibonacciIncrement(array[index - 2], a, b);
+  return isFibonacciTriple(array[index - 2], a, b);
 }
 
 function isSqrt(a, b) {
