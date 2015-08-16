@@ -9,6 +9,9 @@ var fixtures = require('../fixtures/callbacks');
 
 describe('everyN', function() {
   it('should execute test for every n consecutive elements', function() {
+    everyN(1, [1, 5, 10], isFinite).should.be.true;
+    everyN(1, [1, 5, Infinity], isFinite).should.be.false;
+
     everyN(2, [1, 5, 10], fixtures.isAscendingPair).should.be.true;
     everyN(2, [1, 7, 3], fixtures.isAscendingPair).should.be.false;
 
