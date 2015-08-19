@@ -14,6 +14,10 @@
  * @return {Boolean}
  */
 module.exports = function everyN(n, array, callback, thisArg) {
+  if(array.length < n) {
+    return true;
+  }
+
   if (n === 1) {
     return array.every(callback, thisArg);
   }
