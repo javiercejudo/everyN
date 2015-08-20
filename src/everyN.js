@@ -28,13 +28,13 @@ module.exports = function everyN(n, array, callback, thisArg) {
     return every2(array, callback, thisArg);
   }
 
-  var lengthMinus1 = array.length - 1;
+  var lengthMinusN = array.length - n;
   var index;
   var iterationArgs;
 
-  for (index = n; index < lengthMinus1; index += 1) {
-    iterationArgs = array.slice(index - n, index);
-    iterationArgs.push(index - 1, array);
+  for (index = 0; index <= lengthMinusN; index += 1) {
+    iterationArgs = array.slice(index, index + n);
+    iterationArgs.push(index + n - 1, array);
 
     if (!callback.apply(thisArg, iterationArgs)) {
       return false;
