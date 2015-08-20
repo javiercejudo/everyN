@@ -8,7 +8,7 @@ Like `Array.prototype.every` but for every n-tuple
 
 ## Install
 
-    npm i everyN
+    npm i every-n
 
 ## Usage
 
