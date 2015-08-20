@@ -6,6 +6,7 @@ module.exports = {
   isAscendingPair: isAscendingPair,
   isFibonacciTriple: isFibonacciTriple,
   isFibonacciTripleWith2: isFibonacciTripleWith2,
+  isFibonacciQuadrupletWith3: isFibonacciQuadrupletWith3,
   isSqrt: isSqrt,
   noop: noop
 };
@@ -25,6 +26,14 @@ function isFibonacciTripleWith2(a, b, index, array) {
   }
 
   return isFibonacciTriple(array[index - 2], a, b);
+}
+
+function isFibonacciQuadrupletWith3(a, b, c, index, array) {
+  if (index < 4) {
+    return b >= a && c >=b;
+  }
+
+  return isFibonacciTriple(array[index - 3], a, b) && isFibonacciTriple(a, b, c);
 }
 
 function isSqrt(a, b) {

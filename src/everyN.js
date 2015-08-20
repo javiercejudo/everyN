@@ -2,6 +2,8 @@
 
 'use strict';
 
+var every2 = require('every2');
+
 /**
  * Tests whether every n-tuple in the array pass the test
  * implemented by the provided function.
@@ -22,13 +24,17 @@ module.exports = function everyN(n, array, callback, thisArg) {
     return array.every(callback, thisArg);
   }
 
-  var lengthMinusN = array.length - n;
+  if (n === 2) {
+    return every2(array, callback, thisArg);
+  }
+
+  var lengthMinus1 = array.length - 1;
   var index;
   var iterationArgs;
 
-  for (index = 0; index <= lengthMinusN; index += 1) {
-    iterationArgs = array.slice(index, index + n);
-    iterationArgs.push(index + 1, array);
+  for (index = n; index < lengthMinus1; index += 1) {
+    iterationArgs = array.slice(index - n, index);
+    iterationArgs.push(index - 1, array);
 
     if (!callback.apply(thisArg, iterationArgs)) {
       return false;
