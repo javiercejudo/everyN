@@ -1,6 +1,6 @@
 {
   "name": "every-n",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Like Array.prototype.every but for every n-tuple",
   "main": "src/everyN.js",
   "scripts": {
