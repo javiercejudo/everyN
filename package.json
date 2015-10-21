@@ -30,6 +30,6 @@
     "should": "5.2.0"
   },
   "dependencies": {
-    "every2": "1.0.0"
+    "every2": "1.0.1"
   }
 }
