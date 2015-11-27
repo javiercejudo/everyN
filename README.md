@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/javiercejudo/everyN/badge.svg?branch=master)](https://coveralls.io/r/javiercejudo/everyN?branch=master)
 [![Code Climate](https://codeclimate.com/github/javiercejudo/everyN/badges/gpa.svg)](https://codeclimate.com/github/javiercejudo/everyN)
 
-Like `Array.prototype.every` but for every n-tuple
+Like [`Array.prototype.every`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/every) but for every n-tuple
 
 ## Install
 
