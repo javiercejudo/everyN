@@ -30,6 +30,6 @@
     "should": "^7.1.1"
   },
   "dependencies": {
-    "every2": "^1.0.0"
+    "every2": "^2.0.0"
   }
 }
