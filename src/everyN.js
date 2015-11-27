@@ -9,13 +9,13 @@ var every2 = require('every2');
  * implemented by the provided function.
  *
  * @param  {Number} n The number of items to test against
- * @param  {Array} array The array to iterate over
  * @param  {Function} callback The function to call with every n-tuple
+ * @param  {Array} array The array to iterate over
  * @param  {Boolean} thisArg Value to use as this when executing callback
  *
  * @return {Boolean}
  */
-module.exports = function everyN(n, array, callback, thisArg) {
+module.exports = function everyN(n, callback, array, thisArg) {
   if(array.length < n) {
     return true;
   }
@@ -25,7 +25,7 @@ module.exports = function everyN(n, array, callback, thisArg) {
   }
 
   if (n === 2) {
-    return every2(array, callback, thisArg);
+    return every2(callback, array, thisArg);
   }
 
   var lengthMinusN = array.length - n;
